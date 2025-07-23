@@ -1,0 +1,23 @@
+.valores ul {
+    list-style: none; /* Quita viñetas */
+    padding: 0;
+}
+
+.valor-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.valor-item img {
+    width: 40px; /* Ajusta según tu necesidad */
+    height: 40px;
+    margin-right: 1em;
+    object-fit: contain;
+}
+
+.valor-item span {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
