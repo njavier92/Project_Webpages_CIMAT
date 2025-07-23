@@ -1,52 +1,56 @@
-/* Contenedor principal */
+/* Contenedor principal para la sección de Misión, Visión y Valores */
 .mision-vision-valores {
-    padding: 2em;
-    max-width: 1000px;
-    margin: auto;
+    padding: 2em; /* espacio interno alrededor del contenido */
+    max-width: 1000px; /* ancho máximo para no estirarse demasiado en pantallas grandes */
+    margin: auto; /* centra el contenedor horizontalmente */
 }
 
-/* Fila superior con dos columnas */
+/* Fila superior que contiene dos columnas */
 .fila-superior {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2em;
-    margin-bottom: 2em;
-    text-align: justify;
+    display: flex; /* usa flexbox para alinear columnas */
+    flex-wrap: wrap; /* permite que las columnas bajen a la siguiente línea si no caben */
+    justify-content: space-between; /* separa las columnas con espacio entre ellas */
+    gap: 2em; /* espacio entre elementos flex */
+    margin-bottom: 2em; /* margen inferior para separar de lo siguiente */
+    text-align: justify; /* justifica el texto para mejor lectura */
 }
 
+/* Estilo común para columnas dentro de fila-superior y el contenedor de valores */
 .fila-superior .columna, .valores {
-    flex: 1 1 45%;
-    background-color: #f1f1f1;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%; /* flexible, mínimo 45% de ancho cada columna */
+    background-color: #f1f1f1; /* fondo gris claro */
+    padding: 1em; /* espacio interno */
+    border-radius: 10px; /* bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra suave para dar profundidad */
 }
 
-/* Valores */
+/* Lista de valores: sin viñetas y con margen a la izquierda */
 .valores ul {
-    list-style: none;
-    padding: 0;
-    margin-left: 60px;
+    list-style: none; /* quita las viñetas */
+    padding: 0; /* elimina padding */
+    margin-left: 60px; /* espacio a la izquierda para separar del borde */
 }
 
+/* Cada ítem dentro de valores con flexbox para alinear imagen y texto */
 .valor-item {
     display: flex;
-    align-items: center;
-    margin-bottom: 1em;
+    align-items: center; /* alinea verticalmente la imagen y texto */
+    margin-bottom: 1em; /* espacio entre ítems */
 }
 
+/* Imagen dentro del ítem valor */
 .valor-item img {
-    width: 75px;
-    height: 75px;
-    margin-right: 1em;
-    object-fit: contain;
-    border-radius: 10%;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 75px; /* ancho fijo */
+    height: 75px; /* alto fijo */
+    margin-right: 1em; /* espacio entre imagen y texto */
+    object-fit: contain; /* la imagen se ajusta sin deformarse */
+    border-radius: 10%; /* bordes ligeramente redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
 }
 
+/* Texto dentro del ítem valor */
 .valor-item span {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.4;
+    font-size: 1rem; /* tamaño de fuente estándar */
+    color: #333; /* color de texto gris oscuro */
+    line-height: 1.4; /* altura de línea para mejor legibilidad */
 }

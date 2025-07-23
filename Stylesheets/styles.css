@@ -49,30 +49,31 @@ a:hover {
     text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
-/* Contenedor principal */
+/* Contenedor principal que alinea el aside y el main uno al lado del otro */
 .contenido-principal {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  gap: 20px;
+  display: flex; /* Usa Flexbox para distribuir los elementos hijos horizontalmente */
+  flex-direction: row; /* Alinea los elementos en fila (uno al lado del otro) */
+  padding: 20px; /* Espaciado interno alrededor del contenedor */
+  gap: 20px; /* Espacio entre el aside y el main */
 }
 
-/* Aside a la izquierda */
+/* Estilos para la barra lateral (aside), que se sitúa a la izquierda */
 aside {
-  flex: 1;
-  background-color: #eaf2ff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Ocupa 1 parte del espacio disponible */
+  background-color: #eaf2ff; /* Color de fondo azul claro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
 }
 
-/* Main a la derecha */
+/* Estilos para el contenido principal (main), que se sitúa a la derecha */
 main {
-  flex: 3;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
+  flex: 3; /* Ocupa 3 partes del espacio disponible, es decir, más ancho que el aside */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Color de fondo gris claro */
+  border-radius: 10px; /* Bordes redondeados */
 }
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 /* Disposición lado a lado de texto e imagen */
 .contenido {
@@ -101,72 +102,78 @@ main {
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 /* Encabezado de página general */
 .encabezado {
-    display: flex; /* Diseño en fila */
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Espacia entre logo-izquierda, texto y logo-derecha */
+    display: flex; /* Usa modelo de caja flexible para organizar el contenido en fila */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos (izquierda, centro y derecha) */
     
-    /* Fondo degradado desde blanco a gris verdoso */
+    /* Fondo con un degradado diagonal de blanco a gris verdoso */
     background: linear-gradient(135deg, rgba(252,255,244,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%);
     
-    padding: 1em; /* Espacio interno */
-    flex-wrap: wrap; /* Permite envolver en pantallas pequeñas */
-    text-align: center; /* Centra el contenido textual */
-    border-bottom: 1px solid #1e1e1e; /* Línea inferior */
+    padding: 1em; /* Añade espacio interno alrededor del contenido */
+    flex-wrap: wrap; /* Permite que el contenido se acomode en varias líneas si no cabe */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    border-bottom: 1px solid #1e1e1e; /* Línea delgada debajo del encabezado */
 }
 
+/* Estilos para los logos ubicados a la izquierda y derecha */
 .logo-izquierda img,
 .logo-derecha img {
-    width: 300px; /* Ancho máximo */
-    height: auto; /* Proporciones originales */
-    max-width: 60%; /* Se ajusta al contenedor */
+    width: 300px; /* Tamaño base de los logos */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 60%; /* Se ajusta dinámicamente al contenedor si es necesario */
 }
 
+/* Ajuste adicional para el logo izquierdo */
 .logo-izquierda img {
-    max-width: 100%; /* Imagen de la izquierda se adapta aún más */
+    max-width: 100%; /* Permite al logo izquierdo usar todo el espacio disponible */
 }
 
-/* Estilo del bloque central de texto */
+/* Contenedor de los textos del encabezado (centrales) */
 .texto-header {
-    flex: 1 1 200px; /* Se adapta al espacio disponible */
-    padding: 0 1em; /* Espaciado lateral */
+    flex: 1 1 200px; /* Permite que el bloque crezca o se reduzca con un ancho mínimo de 200px */
+    padding: 0 1em; /* Espacio horizontal dentro del contenedor */
 }
 
+/* Estilo general para los títulos dentro del encabezado */
 .texto-header h1,
 .texto-header h2,
 .texto-header h3 {
-    margin: 0.2em 0; /* Espaciado vertical */
-    color: #003366; /* Azul oscuro */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    margin: 0.2em 0; /* Espacio vertical entre títulos */
+    color: #003366; /* Color azul oscuro */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra ligera para mejorar la visibilidad del texto */
 }
 
+/* Estilo específico para el título principal */
 .texto-header h1 {
-    font-family: Rubik Dirt; /* Fuente decorativa para el título principal */
-    font-size: 3.0em; /* Tamaño grande */
+    font-family: Rubik Dirt; /* Fuente decorativa personalizada */
+    font-size: 3.0em; /* Tamaño grande para destacar */
 }
 
+/* Subtítulo (h2) con cursiva */
 .texto-header h2 {
-    font-size: 1.9em; /* Tamaño medio */
-    font-style: italic; /* Cursiva */
+    font-size: 1.9em;
+    font-style: italic;
 }
 
+/* Sub-subtítulo (h3) también en cursiva */
 .texto-header h3 {
-    font-size: 1.6em; /* Tamaño más pequeño */
-    font-style: italic; /* Cursiva */
+    font-size: 1.6em;
+    font-style: italic;
 }
 
-/* Adaptación del encabezado a pantallas pequeñas */
+/* Media query: Ajustes para pantallas pequeñas (menores a 768px) */
 @media (max-width: 768px) {
     .encabezado {
-        /* Ya no usamos flex-direction: column */
-        flex-wrap: nowrap; /* Evita salto de línea */
-        padding: 0.5em;
+        flex-wrap: nowrap; /* No permite que los elementos se vayan a la siguiente línea */
+        padding: 0.5em; /* Menos espacio interno */
     }
 
     .logo-izquierda img,
     .logo-derecha img {
-        max-width: 80px; /* Logos más pequeños */
+        max-width: 80px; /* Reducción de tamaño de los logos */
     }
 
+    /* Ajustes en el tamaño de fuente para los títulos en pantallas pequeñas */
     .texto-header h1 {
         font-size: 1.5em;
     }
@@ -180,84 +187,84 @@ main {
     }
 
     .texto-header {
-        padding: 0 0.5em;
+        padding: 0 0.5em; /* Reducción del padding horizontal */
     }
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilo general del área principal del contenido */
 main {
-    max-width: 100%;
-    margin: 0px;
-    padding: 0 20px;
+    max-width: 100%; /* El contenido puede ocupar todo el ancho disponible */
+    margin: 0px; /* Elimina márgenes externos */
+    padding: 0 20px; /* Espacio horizontal a los lados del contenido */
 }
 
-/* Secciones generales dentro de main */
-/*.contenedor_carreras section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #003366;
-}
-
-/* Artículos independientes (noticias, contenidos) */
+/* Artículos independientes (por ejemplo: noticias, entradas de blog) */
 article {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: #f2f2f2; /* Fondo gris claro */
+    padding: 20px; /* Espacio interno */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    margin-top: 20px; /* Espacio superior entre artículos */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
 }
 
-/* Contenido complementario */
+/* Estilo para el contenido complementario que aparece como una barra lateral */
 aside {
-    background-color: #e6f0ff;
-    padding: 20px;
-    margin: 40px auto;
-    font-size: 1.2em;
-    max-width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: #e6f0ff; /* Fondo azul muy claro */
+    padding: 20px; /* Espacio interno */
+    margin: 40px auto; /* Márgenes verticales y centrado horizontal */
+    font-size: 1.2em; /* Tamaño de fuente más grande que el normal */
+    max-width: 250px; /* Limita el ancho máximo del aside */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Sombra ligera */
 }
 
+/* Título dentro del aside */
 aside h3 {
-    color: #003366;
-    margin-bottom: 5px;
-    border-bottom: 2px solid #003366;
-    padding-bottom: 0px;
+    color: #003366; /* Azul oscuro */
+    margin-bottom: 5px; /* Espacio debajo del título */
+    border-bottom: 2px solid #003366; /* Línea decorativa debajo del título */
+    padding-bottom: 0px; /* No se añade espacio entre texto y línea */
 }
 
+/* Lista dentro del aside (como un menú o enlaces) */
 aside ul {
-    list-style: none;
-    font-size: 0.8em;
-    padding: 0;
+    list-style: none; /* Quita los puntos de lista */
+    font-size: 0.8em; /* Letra más pequeña */
+    padding: 0; /* Elimina el espacio interno por defecto */
 }
 
+/* Espaciado entre los elementos de la lista */
 aside ul li {
-    margin: 10px 0;
+    margin: 10px 0; /* Espacio arriba y abajo de cada ítem */
 }
 
+/* Enlaces dentro del aside */
 aside a {
-    color: #003366;
-    text-decoration: none;
+    color: #003366; /* Azul oscuro */
+    text-decoration: none; /* Sin subrayado por defecto */
 }
 
+/* Efecto al pasar el cursor sobre los enlaces */
 aside a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Muestra subrayado al pasar el mouse */
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 /* Responsive adicional para secciones y aside */
-
 @media (max-width: 768px) {
+    /* Ajusta el padding horizontal del main para pantallas pequeñas */
     main {
         padding: 0 10px;
     }
 
+    /* Aplica padding y margen a section, article y aside para mejor separación y legibilidad */
     section, article, aside {
         padding: 15px;
         margin: 20px 0;
     }
 
+    /* Hace que el aside ocupe el 100% del ancho disponible en dispositivos móviles */
     aside {
         max-width: 100%;
     }
@@ -316,56 +323,62 @@ aside a:hover {
     font-size: 0.85em; /* Tamaño de texto pequeño */
 }
 
+/* Contenedor de las redes sociales con diseño flexible y espacio entre iconos */
 .redes-sociales {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 1em;
+  gap: 20px; /* espacio entre cada icono */
+  justify-content: center; /* centra los iconos horizontalmente */
+  padding: 1em; /* espacio interno alrededor de los iconos */
 }
 
+/* Estilo base para cada icono de red social */
 .icono {
-  position: relative;
-  color: white;
-  font-size: 1.5em;
-  text-decoration: none;
-  transition: color 0.3s;
+  position: relative; /* necesario para posicionar el tooltip relativo a cada icono */
+  color: white; /* color inicial del icono */
+  font-size: 1.5em; /* tamaño del icono */
+  text-decoration: none; /* sin subrayado en caso de ser un enlace */
+  transition: color 0.3s; /* transición suave al cambiar el color */
 }
 
+/* Cambio de color al pasar el cursor por encima del icono */
 .icono:hover {
-  color: #1da1f2; /* o el color que quieras al pasar el cursor */
+  color: #1da1f2; /* color personalizado (ejemplo: azul Twitter) */
 }
 
+/* Tooltip (mensaje emergente) oculto por defecto */
 .icono .tooltip {
-  visibility: hidden;
-  opacity: 0;
-  background-color: white;
-  color: black;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px 10px;
-  position: absolute;
-  bottom: 150%;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.3s;
-  white-space: nowrap;
-  font-size: 0.85em;
-  font-weight: bold;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  visibility: hidden; /* no visible */
+  opacity: 0; /* transparente */
+  background-color: white; /* fondo blanco para el tooltip */
+  color: black; /* texto negro */
+  text-align: center; /* texto centrado */
+  border-radius: 5px; /* bordes redondeados */
+  padding: 5px 10px; /* espacio interno */
+  position: absolute; /* posicionamiento absoluto respecto al icono */
+  bottom: 150%; /* aparece arriba del icono (más o menos 1.5 veces la altura) */
+  left: 50%; /* centrado horizontal respecto al icono */
+  transform: translateX(-50%); /* para centrar exacto horizontalmente */
+  transition: opacity 0.3s; /* transición suave de aparición */
+  white-space: nowrap; /* texto en una sola línea */
+  font-size: 0.85em; /* tamaño de letra un poco más pequeño */
+  font-weight: bold; /* texto en negrita */
+  z-index: 10; /* para que esté encima de otros elementos */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* sombra suave para dar relieve */
 }
 
+/* Triángulo (flecha) debajo del tooltip apuntando hacia el icono */
 .icono .tooltip::after {
   content: '';
   position: absolute;
-  top: 100%; /* punta hacia abajo */
-  left: 50%;
+  top: 100%; /* justo debajo del tooltip */
+  left: 50%; /* centrado horizontal */
   transform: translateX(-50%);
   border-width: 6px;
   border-style: solid;
-  border-color: white transparent transparent transparent;
+  border-color: white transparent transparent transparent; /* solo la punta blanca hacia abajo */
 }
 
+/* Mostrar el tooltip cuando se pasa el cursor sobre el icono */
 .icono:hover .tooltip {
   visibility: visible;
   opacity: 1;
@@ -373,7 +386,9 @@ aside a:hover {
 
 /**************************************************************************************************************************************/
 /* Responsive (opcional) */
+/* Cuando la pantalla es menor o igual a 768px (tablets y móviles) */
 @media (max-width: 768px) {
+  /* Cambia la dirección del flex container .contenido-principal a columna */
   .contenido-principal {
     flex-direction: column;
   }
