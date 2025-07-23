@@ -1,5 +1,30 @@
+/* Contenedor principal */
+.mision-vision-valores {
+    padding: 2em;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Fila superior con dos columnas */
+.fila-superior {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.fila-superior .columna {
+    flex: 1 1 45%;
+    background-color: #f1f1f1;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Valores */
 .valores ul {
-    list-style: none; /* Quita viñetas */
+    list-style: none;
     padding: 0;
 }
 
@@ -10,7 +35,7 @@
 }
 
 .valor-item img {
-    width: 40px; /* Ajusta según tu necesidad */
+    width: 40px;
     height: 40px;
     margin-right: 1em;
     object-fit: contain;
