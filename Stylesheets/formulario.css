@@ -1,0 +1,83 @@
+/* hoja de estilo para el formulario */
+
+/* Títulos secundarios (h2) */
+h2 {
+    text-align: center;    /* Centra el texto horizontalmente */
+    color: #003366;        /* Azul oscuro institucional */
+    margin-top: 30px;      /* Separación superior */
+}
+
+/* Estilo general del formulario de contacto */
+#formulario-contacto {
+    background-color: #f9f9f9; /* Fondo gris claro para diferenciar el formulario */
+    padding: 1.5em;            /* Espacio interno alrededor del contenido */
+    margin: 2em auto;          /* Margen vertical y centrado horizontalmente */
+    border: 1px solid #ccc;    /* Borde gris claro */
+    border-radius: 10px;       /* Bordes redondeados */
+    width: 90%;                /* Ancho relativo en pantallas pequeñas */
+    max-width: 600px;          /* Ancho máximo fijo para evitar que se estire demasiado */
+}
+
+/* Estilo para campos de entrada y área de texto */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;               /* Ocupan todo el ancho del formulario */
+    padding: 0.5em;            /* Espaciado interno */
+    margin-top: 0.3em;         /* Separación superior respecto a la etiqueta */
+    margin-bottom: 1em;        /* Separación inferior entre campos */
+    border: 1px solid #bbb;    /* Borde gris medio */
+    border-radius: 5px;        /* Bordes redondeados */
+    font-family: inherit;      /* Hereda la fuente general del sitio */
+    box-sizing: border-box;    /* Incluye el padding dentro del ancho definido */
+}
+
+/* Botón de envío del formulario */
+input[type="submit"],
+button[type="submit"] {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: #fff;               /* Texto blanco */
+    border: none;              /* Sin borde */
+    padding: 0.7em 1.5em;      /* Espaciado interno */
+    font-size: 1em;            /* Tamaño de letra */
+    cursor: pointer;          /* Cursor tipo "mano" al pasar el ratón */
+    border-radius: 5px;        /* Bordes redondeados */
+}
+
+/* Efecto visual al pasar el cursor sobre el botón */
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #0055a5; /* Azul más claro en hover */
+}
+
+/* Estilo para agrupación de opciones: radios y checkboxes */
+fieldset {
+    border: 1px solid #ccc;    /* Borde gris claro */
+    padding: 1em;              /* Espaciado interior */
+    border-radius: 6px;        /* Bordes redondeados */
+    margin-bottom: 1em;        /* Separación inferior entre secciones */
+}
+
+/* Título del fieldset */
+legend {
+    font-weight: bold;         /* Texto en negrita */
+    margin-bottom: 0.5em;      /* Separación inferior */
+}
+
+/* Agrupación visual para radios y checkboxes */
+.radio-group label,
+.checkbox-group label {
+    display: flex;             /* Elementos en fila: input + texto */
+    align-items: center;       /* Centrado vertical de los íconos y texto */
+    gap: 8px;                  /* Espacio entre el botón y el texto */
+    margin-bottom: 0.5em;      /* Separación inferior entre opciones */
+    font-size: 1em;            /* Tamaño de letra estándar */
+    cursor: pointer;           /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo específico para inputs de tipo radio y checkbox */
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    margin: 0;                 /* Elimina márgenes por defecto */
+    width: auto;               /* Ajusta el ancho al tamaño del ícono */
+}

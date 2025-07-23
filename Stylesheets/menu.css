@@ -1,0 +1,86 @@
+
+/* hoja de estilo para el menú */
+
+/* Importa la fuente 'Oswald' desde Google Fonts para usar en los textos del menú */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* Estilo para la lista dentro del menú de navegación */
+#menu ul {
+    list-style-type: none; /* Elimina viñetas de la lista */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina relleno por defecto */
+    display: flex; /* Coloca los elementos en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    border-bottom: 1px solid #1e1e1e; /* Línea inferior como separación visual */
+}
+
+/* Estilo para los enlaces del menú */
+#menu a {
+    color: rgb(0, 0, 0); /* Color de texto negro */
+    text-decoration: none; /* Elimina el subrayado */
+    display: block; /* Convierte el enlace en un bloque para que el padding funcione completamente */
+    padding: 0px 26px; /* Espaciado horizontal entre enlaces */
+    font-family: "Oswald"; /* Aplica la fuente importada */
+    font-size: 20px; /* Tamaño del texto del menú */
+}
+
+/* Estilo para el contenedor general del menú */
+#menu {
+    /* Fondo con degradado verde brillante (enlace de referencia incluido en comentario) */
+    background: linear-gradient(to bottom, 
+        rgba(191,210,85,1) 0%,    /* Verde claro */
+        rgba(142,185,42,1) 50%,   /* Verde medio */
+        rgba(114,170,0,1) 51%,    /* Verde intenso */
+        rgba(158,203,45,1) 100%); /* Verde claro final */
+    
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto; /* Altura ajustada al contenido */
+}
+
+/* Estilo para los separadores tipo barra vertical | */
+.barra {
+    color: rgb(255, 255, 255); /* Color blanco para el separador */
+    padding: 0; /* Sin espacio interior adicional */
+}
+
+/* Efecto al pasar el cursor sobre los enlaces del menú */
+#menu a:hover {
+    color: rgb(241, 239, 237); /* Cambia el texto a un blanco suave */
+    background: rgba(0, 0, 0, 0.2); /* Fondo semitransparente en hover */
+    animation: 1s transicion 0.20; /* Aplica la animación llamada 'transicion' */
+}
+
+.activo {
+ background: rgba(0, 0, 0, 0.2); /* Fondo semitransparente en hover */
+  
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 1px;
+}
+
+/* Definición de la animación 'transicion' */
+@keyframes transicion {
+    0% {
+        opacity: 0; /* Al iniciar, el elemento es invisible */
+    }
+    /* No se define el 100%, por lo tanto, se mantiene el estado alcanzado en el 0% */
+}
+
+@media (max-width: 768px) {
+    #menu ul {
+        flex-wrap: nowrap;            /* Evita que los elementos pasen a otra línea */
+        overflow-x: auto;             /* Habilita scroll horizontal si es necesario */
+        white-space: nowrap;         /* Impide que los elementos se rompan */
+        padding: 0px;             /* Reduce relleno lateral */
+    }
+
+    #menu a {
+        font-size: 14px;              /* Reduce tamaño del texto */
+        padding: 0px;            /* Menos espacio entre enlaces */
+    }
+
+    .barra {
+        padding: 0 4px;               /* Reduce espacio entre barras */
+    }
+}

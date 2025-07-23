@@ -1,0 +1,380 @@
+/* Hoja de Estilos Generales */
+
+/* Importa la fuente decorativa 'Rubik Dirt' desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap'); 
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Configuraciones generales */
+
+body {
+    margin: 0; /* Elimina márgenes por defecto del navegador */
+    padding: 0;
+    background-color: #ffffff; /* Fondo blanco para el sitio */
+    font-family: 'Open Sans', sans-serif; /* Fuente base para el texto */
+    font-size: 16px; /* Tamaño de letra base */
+    color: #333; /* Color de texto gris oscuro */
+}
+
+/* Cita con fondo y estilo */
+#Cita {
+    background-color: #f2d293; /* Color de fondo beige claro */
+    font-style: italic; /* Texto en cursiva */
+    text-align: center; /* Centra el texto */
+    font-size: 1.0em; /* Tamaño del texto estándar */
+    padding-top: 0%; /* Sin separación superior */
+    margin: 0; /* Elimina márgenes exteriores */
+}
+
+/* Títulos principales */
+h1, h2, h3 {
+    color: #003366; /* Azul oscuro */
+    text-align: center; /* Alineación centrada */
+    margin-top: 20px; /* Separación superior */
+}
+
+/* Imagen de la facultad con estilo */
+.img-facultad {
+    max-width: 100%; /* Se adapta al ancho disponible */
+    height: auto; /* Mantiene proporciones */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Enlaces */
+a {
+    color: #0066cc; /* Color azul medio */
+    text-decoration: none; /* Sin subrayado por defecto */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Contenedor principal */
+.contenido-principal {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Aside a la izquierda */
+aside {
+  flex: 1;
+  background-color: #eaf2ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main a la derecha */
+main {
+  flex: 3;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Disposición lado a lado de texto e imagen */
+.contenido {
+    display: flex; /* Activa diseño en fila */
+    justify-content: space-between; /* Distribuye el espacio entre columnas */
+    padding: 20px; /* Espaciado interior */
+    gap: 20px; /* Separación entre columnas */
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+}
+
+.descripcion {
+    flex: 1; /* Ocupa el mismo espacio que la imagen */
+    font-size: 16px; /* Tamaño de letra */
+    line-height: 1.5; /* Altura de línea para legibilidad */
+    min-width: 280px; /* Ancho mínimo para evitar que se deforme */
+}
+
+.imagen {
+    flex: 1; /* Ocupa el mismo espacio que la descripción */
+    display: flex; /* Permite centrar internamente la imagen */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-width: 280px; /* Ancho mínimo */
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Encabezado de página general */
+.encabezado {
+    display: flex; /* Diseño en fila */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Espacia entre logo-izquierda, texto y logo-derecha */
+    
+    /* Fondo degradado desde blanco a gris verdoso */
+    background: linear-gradient(135deg, rgba(252,255,244,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%);
+    
+    padding: 1em; /* Espacio interno */
+    flex-wrap: wrap; /* Permite envolver en pantallas pequeñas */
+    text-align: center; /* Centra el contenido textual */
+    border-bottom: 1px solid #1e1e1e; /* Línea inferior */
+}
+
+.logo-izquierda img,
+.logo-derecha img {
+    width: 300px; /* Ancho máximo */
+    height: auto; /* Proporciones originales */
+    max-width: 60%; /* Se ajusta al contenedor */
+}
+
+.logo-izquierda img {
+    max-width: 100%; /* Imagen de la izquierda se adapta aún más */
+}
+
+/* Estilo del bloque central de texto */
+.texto-header {
+    flex: 1 1 200px; /* Se adapta al espacio disponible */
+    padding: 0 1em; /* Espaciado lateral */
+}
+
+.texto-header h1,
+.texto-header h2,
+.texto-header h3 {
+    margin: 0.2em 0; /* Espaciado vertical */
+    color: #003366; /* Azul oscuro */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.texto-header h1 {
+    font-family: Rubik Dirt; /* Fuente decorativa para el título principal */
+    font-size: 3.0em; /* Tamaño grande */
+}
+
+.texto-header h2 {
+    font-size: 1.9em; /* Tamaño medio */
+    font-style: italic; /* Cursiva */
+}
+
+.texto-header h3 {
+    font-size: 1.6em; /* Tamaño más pequeño */
+    font-style: italic; /* Cursiva */
+}
+
+/* Adaptación del encabezado a pantallas pequeñas */
+@media (max-width: 768px) {
+    .encabezado {
+        /* Ya no usamos flex-direction: column */
+        flex-wrap: nowrap; /* Evita salto de línea */
+        padding: 0.5em;
+    }
+
+    .logo-izquierda img,
+    .logo-derecha img {
+        max-width: 80px; /* Logos más pequeños */
+    }
+
+    .texto-header h1 {
+        font-size: 1.5em;
+    }
+
+    .texto-header h2 {
+        font-size: 1.1em;
+    }
+
+    .texto-header h3 {
+        font-size: 1em;
+    }
+
+    .texto-header {
+        padding: 0 0.5em;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+main {
+    max-width: 100%;
+    margin: 0px;
+    padding: 0 20px;
+}
+
+/* Secciones generales dentro de main */
+/*.contenedor_carreras section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #003366;
+}
+
+/* Artículos independientes (noticias, contenidos) */
+article {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Contenido complementario */
+aside {
+    background-color: #e6f0ff;
+    padding: 20px;
+    margin: 40px auto;
+    font-size: 1.2em;
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+aside h3 {
+    color: #003366;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0px;
+}
+
+aside ul {
+    list-style: none;
+    font-size: 0.8em;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+aside a {
+    color: #003366;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Responsive adicional para secciones y aside */
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px;
+    }
+
+    section, article, aside {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    aside {
+        max-width: 100%;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Pie de página general */
+.footer {
+    background-color: #374701; /* Verde oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 1em; /* Espaciado interior */
+    font-size: 0.95em; /* Tamaño de texto ligeramente reducido */
+}
+
+.footer-contenedor {
+    display: flex; /* Diseño en fila */
+    flex-wrap: wrap; /* Permite que se acomode verticalmente en móviles */
+    justify-content: space-between; /* Distribuye columnas horizontalmente */
+    gap: 2em; /* Espacio entre columnas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Columnas del footer */
+.footer_col1, .footer_col2, .footer_col3 {
+    flex: 1 1 250px; /* Crece proporcionalmente hasta 250px mínimo */
+    min-width: 200px; /* Ancho mínimo por columna */
+}
+.footer_col1 {text-align: center;}
+
+.footer_col2, .footer_col3 {padding-top: 2em}
+
+.footer h4 {
+    font-size: 1.1em; /* Tamaño del encabezado */
+    margin-bottom: 0.5em; /* Espaciado inferior */
+    color: #f0db4f; /* Amarillo brillante para destacar */
+}
+
+.footer p, .footer a {
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado en enlaces */
+    margin: 0.3em 0; /* Espacio entre líneas */
+    display: block; /* Cada elemento ocupa su propia línea */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Línea inferior del footer */
+.footer-bottom {
+    border-top: 1px solid #ffffff33; /* Línea separadora superior con transparencia */
+    text-align: center; /* Texto centrado */
+    padding-top: 1em; /* Espacio encima del texto */
+    margin-top: 1em; /* Separación del contenido anterior */
+    font-size: 0.85em; /* Tamaño de texto pequeño */
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 1em;
+}
+
+.icono {
+  position: relative;
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icono:hover {
+  color: #1da1f2; /* o el color que quieras al pasar el cursor */
+}
+
+.icono .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 0.85em;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.icono .tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* punta hacia abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.icono:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/**************************************************************************************************************************************/
+/* Responsive (opcional) */
+@media (max-width: 768px) {
+  .contenido-principal {
+    flex-direction: column;
+  }
+}
