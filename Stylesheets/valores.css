@@ -12,9 +12,10 @@
     justify-content: space-between;
     gap: 2em;
     margin-bottom: 2em;
+    text-align: justify;
 }
 
-.fila-superior .columna {
+.fila-superior .columna, .valores {
     flex: 1 1 45%;
     background-color: #f1f1f1;
     padding: 1em;
@@ -26,6 +27,7 @@
 .valores ul {
     list-style: none;
     padding: 0;
+    margin-left: 60px;
 }
 
 .valor-item {
@@ -35,10 +37,12 @@
 }
 
 .valor-item img {
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     margin-right: 1em;
     object-fit: contain;
+    border-radius: 10%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .valor-item span {
